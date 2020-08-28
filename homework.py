@@ -9,7 +9,7 @@ load_dotenv()
 PRACTICUM_TOKEN = os.getenv("PRACTICUM_TOKEN")
 TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
 CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
-PRACTICUM_URL = os.getenv("Yandex_Practicum_url")
+url = os.getenv("Yandex_Practicum_url")
 
 
 def parse_homework_status(homework):
@@ -26,7 +26,6 @@ def parse_homework_status(homework):
 
 
 def get_homework_statuses(current_timestamp):
-    url = PRACTICUM_URL
     params = {"from_date": current_timestamp}
     headers = {"Authorization": f"OAuth {PRACTICUM_TOKEN}"}
     homework_statuses = requests.get(url,
