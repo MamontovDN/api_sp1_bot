@@ -1,2 +1,2 @@
-# api_sp1_bot
+# telegram-bot
 api sp1 bot
